@@ -15,7 +15,7 @@ public class Map {
     // идёт по горизонтали
     public void setupPiecesPositions(){
         for(File file: File.values()){
-            setPiece(new Coordinates(File.A, 2), new Predator(new Coordinates(file, 2), Color.ANSI_GREEN) {
+            setPiece(new Coordinates(File.A, 2), new Predator(new Coordinates(file, 2)) {
                 @Override
                 public int hashCode() {
                     return super.hashCode();

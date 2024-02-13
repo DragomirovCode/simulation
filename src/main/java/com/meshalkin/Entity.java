@@ -3,12 +3,14 @@ package com.meshalkin;
 abstract public class Entity {
     public Coordinates coordinates;
 
-    public String color;
 
-    public Entity(Coordinates coordinates, String color) {
+
+    public Entity(Coordinates coordinates) {
         this.coordinates = coordinates;
-        this.color = color;
+        new Color();
     }
 
     public abstract char getSymbol(); // абстрактный метод для получения символа сущности
+
+    public abstract String getColorSymbol();
 }

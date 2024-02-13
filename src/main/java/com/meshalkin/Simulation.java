@@ -23,7 +23,11 @@ public class Simulation {
             return " ";
         }else{
             Entity entity = map.getEntity(coordinates);
-            return String.valueOf(entity.getSymbol());
+            String colorCOde = getAnsiColor(map,coordinates);
+            return colorCOde + entity.getSymbol();
         }
+    }
+    public String getAnsiColor(Map map, Coordinates coordinates){
+        return map.getEntity(coordinates).getColorSymbol();
     }
 }

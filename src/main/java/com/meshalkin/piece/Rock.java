@@ -6,12 +6,17 @@ import com.meshalkin.Entity;
 
 public class Rock extends Entity {
 
-    public Rock(Coordinates coordinates, String color) {
-        super(coordinates, color);
+    public Rock(Coordinates coordinates) {
+        super(coordinates);
     }
 
     @Override
     public char getSymbol() {
         return 'R';
+    }
+
+    @Override
+    public String getColorSymbol() {
+        return null;
     }
 }

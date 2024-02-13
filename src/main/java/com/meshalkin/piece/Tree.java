@@ -6,12 +6,17 @@ import com.meshalkin.Entity;
 
 public class Tree extends Entity {
 
-    public Tree(Coordinates coordinates, String color) {
-        super(coordinates, color);
+    public Tree(Coordinates coordinates) {
+        super(coordinates);
     }
 
     @Override
     public char getSymbol() {
         return 'T';
+    }
+
+    @Override
+    public String getColorSymbol() {
+        return null;
     }
 }
