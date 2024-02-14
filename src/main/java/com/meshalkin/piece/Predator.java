@@ -11,8 +11,8 @@ public class Predator extends Creature {
     }
 
     @Override
-    public char getSymbol() {
-        return 'P';
+    public String getSymbol() {
+        return "\uD83E\uDD8A";
     }
 
     @Override

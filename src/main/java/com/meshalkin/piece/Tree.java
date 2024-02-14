@@ -1,6 +1,5 @@
 package com.meshalkin.piece;
 
-import com.meshalkin.Color;
 import com.meshalkin.Coordinates;
 import com.meshalkin.Entity;
 
@@ -11,8 +10,8 @@ public class Tree extends Entity {
     }
 
     @Override
-    public char getSymbol() {
-        return 'T';
+    public String getSymbol() {
+        return "\uD83C\uDF32";
     }
 
     @Override

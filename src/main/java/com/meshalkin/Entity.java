@@ -10,7 +10,7 @@ abstract public class Entity {
         new Color();
     }
 
-    public abstract char getSymbol(); // абстрактный метод для получения символа сущности
+    public abstract String getSymbol(); // абстрактный метод для получения символа сущности
 
     public abstract String getColorSymbol();
 }
