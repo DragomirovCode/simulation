@@ -13,9 +13,4 @@ public class Grass extends Entity {
     public String getSymbol() {
         return "\uD83C\uDF3F";
     }
-
-    @Override
-    public String getColorSymbol() {
-        return null;
-    }
 }

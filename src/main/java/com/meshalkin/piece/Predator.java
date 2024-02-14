@@ -14,9 +14,4 @@ public class Predator extends Creature {
     public String getSymbol() {
         return "\uD83E\uDD8A";
     }
-
-    @Override
-    public String getColorSymbol() {
-        return Color.RED;
-    }
 }

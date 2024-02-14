@@ -26,7 +26,4 @@ public class Simulation {
             return entity.getSymbol();
         }
     }
-    public String getAnsiColor(Map map, Coordinates coordinates){
-        return map.getEntity(coordinates).getColorSymbol();
-    }
 }

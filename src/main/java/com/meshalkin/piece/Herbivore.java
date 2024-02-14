@@ -13,9 +13,4 @@ public class Herbivore extends Creature {
     public String getSymbol() {
         return "\uD83D\uDC07";
     }
-
-    @Override
-    public String getColorSymbol() {
-        return null;
-    }
 }

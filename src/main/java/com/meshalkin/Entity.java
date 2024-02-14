@@ -7,10 +7,7 @@ abstract public class Entity {
 
     public Entity(Coordinates coordinates) {
         this.coordinates = coordinates;
-        new Color();
     }
 
     public abstract String getSymbol(); // абстрактный метод для получения символа сущности
-
-    public abstract String getColorSymbol();
 }

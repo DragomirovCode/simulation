@@ -13,9 +13,4 @@ public class Tree extends Entity {
     public String getSymbol() {
         return "\uD83C\uDF32";
     }
-
-    @Override
-    public String getColorSymbol() {
-        return null;
-    }
 }

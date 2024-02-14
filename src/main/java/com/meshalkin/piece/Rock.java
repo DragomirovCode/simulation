@@ -13,9 +13,4 @@ public class Rock extends Entity {
     public String getSymbol() {
         return "⛰️";
     }
-
-    @Override
-    public String getColorSymbol() {
-        return null;
-    }
 }
