@@ -26,4 +26,8 @@ public class Simulation {
             return entity.getSymbol();
         }
     }
+
+    public void nextTurn(Coordinates coordinates, CoordinatesShit coordinatesShit){
+
+    }
 }

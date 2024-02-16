@@ -1,13 +1,21 @@
 package com.meshalkin.piece;
 
-import com.meshalkin.Color;
-import com.meshalkin.Coordinates;
-import com.meshalkin.Creature;
+import com.meshalkin.*;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Predator extends Creature {
 
     public Predator(Coordinates coordinates) {
         super(coordinates);
+    }
+
+    @Override
+    protected Set<CoordinatesShit> getEntityMoves() {
+        return new HashSet<>(Arrays.asList(
+                new CoordinatesShit(1,1)));
     }
 
     @Override
