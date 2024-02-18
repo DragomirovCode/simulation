@@ -13,9 +13,12 @@ public class Predator extends Creature {
     }
 
     @Override
-    protected Set<CoordinatesShit> getEntityMoves() {
+    protected Set<CoordinatesShift> getEntityMoves() {
         return new HashSet<>(Arrays.asList(
-                new CoordinatesShit(1,1)));
+                new CoordinatesShift(1,0),
+                new CoordinatesShift(-1,0),
+                new CoordinatesShift(0, -1),
+                new CoordinatesShift(0, 1)));
     }
 
     @Override
