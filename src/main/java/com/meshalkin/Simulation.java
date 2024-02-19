@@ -10,7 +10,7 @@ public class Simulation {
         for (int i = 8; i >= 1 ; i--) {
             String line = ANSI_EARTH_BACKGROUND; // устанавливаем серо-коричневый фон для строки
             for(File file: File.values()){
-                line += getPiecesSprite(map, new Coordinates(file, i));
+                line += getEntitySprite(map, new Coordinates(file, i));
             }
             line += ANSI_RESET; // сбрасываем настройки после окончания строки
             System.out.println(line);
@@ -18,16 +18,12 @@ public class Simulation {
     }
 
     //нужен метод который бы отоброжал сущности
-    public String getPiecesSprite(Map map, Coordinates coordinates){
+    public String getEntitySprite(Map map, Coordinates coordinates){
         if(map.isSquareEmpty(coordinates)){
             return " ";
         }else{
             Entity entity = map.getEntity(coordinates);
             return entity.getSymbol();
         }
-    }
-
-    public void nextTurn(Coordinates coordinates, CoordinatesShift coordinatesShit){
-
     }
 }
