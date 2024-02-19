@@ -2,12 +2,12 @@ package com.meshalkin;
 import java.util.Objects;
 
 public class Coordinates {
-    public File file; // вертикаль
-    public Integer rank; // горизонталь
+    public File x; // вертикаль
+    public Integer y; // горизонталь
 
-    public Coordinates(File file, Integer rank) {
-        this.file = file;
-        this.rank = rank;
+    public Coordinates(File x, Integer y) {
+        this.x = x;
+        this.y = y;
     }
 
     @Override
@@ -15,23 +15,23 @@ public class Coordinates {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Coordinates that = (Coordinates) o;
-        return file == that.file && Objects.equals(rank, that.rank);
+        return x == that.x && Objects.equals(y, that.y);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(file, rank);
+        return Objects.hash(x, y);
     }
     public Coordinates shift(CoordinatesShift shit){
-        return new Coordinates(File.values()[this.file.ordinal()+shit.x], this.rank+shit.y);
+        return new Coordinates(File.values()[this.x.ordinal()+shit.x], this.y +shit.y);
     }
     public boolean canShift(CoordinatesShift shift){
-        int f = file.ordinal() + shift.x;
-        int r = rank + shift.y;
-        if((f < 0) || (f > 8)){
+        int file = x.ordinal() + shift.x;
+        int rank = y + shift.y;
+        if((file < 0) || (file > 8)){
             return false;
         }
-        if((r < 0) || (r > 8)){
+        if((rank < 0) || (rank > 8)){
             return false;
         } else {
             return true;
