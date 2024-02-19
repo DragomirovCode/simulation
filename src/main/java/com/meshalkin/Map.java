@@ -1,6 +1,6 @@
 package com.meshalkin;
 
-import com.meshalkin.piece.*;
+import com.meshalkin.entities.*;
 
 import java.util.HashMap;
 

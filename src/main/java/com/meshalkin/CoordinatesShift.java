@@ -1,10 +1,10 @@
 package com.meshalkin;
 
-public class CoordinatesShit {
+public class CoordinatesShift {
     protected int x; // Координата X
     protected int y; // Координата Y
 
-    public CoordinatesShit(int x, int y) {
+    public CoordinatesShift(int x, int y) {
         this.x = x;
         this.y = y;
     }

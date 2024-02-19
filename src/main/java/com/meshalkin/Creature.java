@@ -11,7 +11,7 @@ abstract public class Creature extends Entity {
     public Set<Coordinates> getAvailableToMove(Map map){
         Set<Coordinates> result = new HashSet<>();
 
-        for (CoordinatesShit shit : getEntityMoves()) {
+        for (CoordinatesShift shit : getEntityMoves()) {
             if(coordinates.canShift(shit)){
                 Coordinates newCoordinates = coordinates.shift(shit);
 
@@ -27,5 +27,5 @@ abstract public class Creature extends Entity {
         return map.isSquareEmpty(coordinates);
     }
 
-    protected abstract Set<CoordinatesShit> getEntityMoves();
+    protected abstract Set<CoordinatesShift> getEntityMoves();
 }

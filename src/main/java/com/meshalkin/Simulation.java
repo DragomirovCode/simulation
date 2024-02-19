@@ -27,7 +27,7 @@ public class Simulation {
         }
     }
 
-    public void nextTurn(Coordinates coordinates, CoordinatesShit coordinatesShit){
+    public void nextTurn(Coordinates coordinates, CoordinatesShift coordinatesShit){
 
     }
 }

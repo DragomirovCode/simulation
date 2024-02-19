@@ -1,4 +1,4 @@
-package com.meshalkin.piece;
+package com.meshalkin.entities;
 
 import com.meshalkin.Coordinates;
 import com.meshalkin.CoordinatesShift;

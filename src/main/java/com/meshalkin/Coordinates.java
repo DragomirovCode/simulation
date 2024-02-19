@@ -22,10 +22,10 @@ public class Coordinates {
     public int hashCode() {
         return Objects.hash(file, rank);
     }
-    public Coordinates shift(CoordinatesShit shit){
+    public Coordinates shift(CoordinatesShift shit){
         return new Coordinates(File.values()[this.file.ordinal()+shit.x], this.rank+shit.y);
     }
-    public boolean canShift(CoordinatesShit shift){
+    public boolean canShift(CoordinatesShift shift){
         int f = file.ordinal() + shift.x;
         int r = rank + shift.y;
         if((f < 0) || (f > 8)){
