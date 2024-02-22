@@ -11,6 +11,14 @@ public class Map {
         entity.coordinates = coordinates;
         entities.put(coordinates, entity);
     }
+    public void removeEntity(Coordinates coordinates){
+        entities.remove(coordinates);
+    }
+    public void moveEntity(Coordinates from, Coordinates to){
+        Entity entity = getEntity(from);
+        removeEntity(from);
+        setEntity(to, entity);
+    }
 
     // идёт по горизонтали
     public void setupPiecesPositions(){
