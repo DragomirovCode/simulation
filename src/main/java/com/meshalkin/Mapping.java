@@ -3,8 +3,9 @@ package com.meshalkin;
 import com.meshalkin.entities.*;
 
 import java.util.HashMap;
+import java.util.Map;
 
-public class Map {
+public class Mapping {
     HashMap<Coordinates, Entity> entities = new HashMap<>();
 
     public void setEntity(Coordinates coordinates, Entity entity){

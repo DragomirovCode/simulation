@@ -8,14 +8,14 @@ abstract public class Creature extends Entity {
         super(coordinates);
     }
 
-    public Set<Coordinates> getAvailableToMove(Map map){
+    public Set<Coordinates> getAvailableToMove(Mapping mapping){
         Set<Coordinates> result = new HashSet<>();
 
         for (CoordinatesShift shit : getEntityMoves()) {
             if(coordinates.canShift(shit)){
                 Coordinates newCoordinates = coordinates.shift(shit);
 
-                if(isTheCellAvailableForAMoves(newCoordinates, map)){
+                if(isTheCellAvailableForAMoves(newCoordinates, mapping)){
                     result.add(newCoordinates);
                 }
             }
@@ -23,8 +23,8 @@ abstract public class Creature extends Entity {
         return result;
     }
 
-    private boolean isTheCellAvailableForAMoves(Coordinates coordinates, Map map) {
-        return map.isSquareEmpty(coordinates);
+    private boolean isTheCellAvailableForAMoves(Coordinates coordinates, Mapping mapping) {
+        return mapping.isSquareEmpty(coordinates);
     }
 
     protected abstract Set<CoordinatesShift> getEntityMoves();

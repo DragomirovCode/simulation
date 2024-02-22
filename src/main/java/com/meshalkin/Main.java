@@ -2,10 +2,10 @@ package com.meshalkin;
 
 public class Main {
     public static void main(String[] args) {
-        Map map = new Map();
-        map.setupPiecesPositions();
+        Mapping mapping = new Mapping();
+        mapping.setupPiecesPositions();
 
         Simulation simulation = new Simulation();
-        simulation.render(map);
+        simulation.render(mapping);
     }
 }
