@@ -22,22 +22,28 @@ public class Coordinates {
     public int hashCode() {
         return Objects.hash(x, y);
     }
-    public Coordinates shift(CoordinatesShift shit){
-        return new Coordinates(File.values()[this.x.ordinal()+shit.x], this.y +shit.y);
+    public Coordinates shift(CoordinatesShift shift) {
+        int newX = this.x.ordinal() + shift.x;
+        int newY = this.y + shift.y;
+        if (canShift(shift)) {
+            return new Coordinates(File.values()[newX], newY);
+        } else {
+            // Возвращаем текущие координаты, так как смещение недопустимо
+            return this;
+        }
     }
+
     public boolean canShift(CoordinatesShift shift){
         int file = x.ordinal() + shift.x;
         int rank = y + shift.y;
-        if((file < 0) || (file > 8)){
-            return false;
-        }
-        if((rank < 0) || (rank > 8)){
+        // Проверяем, что новые координаты находятся в диапазоне от 0 до 7 включительно для файла и ранга
+        if(file < 0 || file >= 8 || rank < 0 || rank >= 8){
             return false;
         } else {
             return true;
         }
     }
-    
+
     @Override
     public String toString() {
         return "Coordinates{" +
