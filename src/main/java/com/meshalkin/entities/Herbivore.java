@@ -15,7 +15,7 @@ public class Herbivore extends Creature {
     }
 
     @Override
-    protected Set<CoordinatesShift> getEntityMoves() {
+    public Set<CoordinatesShift> getEntityMoves() {
         return new HashSet<>(Arrays.asList(
                 new CoordinatesShift(1,0),
                 new CoordinatesShift(-1,0),

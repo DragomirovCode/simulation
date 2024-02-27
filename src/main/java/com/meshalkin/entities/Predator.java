@@ -42,7 +42,7 @@ public class Predator extends Creature implements TargetChooser {
         queue.add(predatorPosition);
         visited.add(predatorPosition);
         while (!queue.isEmpty()){
-            Coordinates current = queue.remove();
+            Coordinates current = queue.poll();
             if(herbivorePositions.contains(current)){
                 return current;
             }

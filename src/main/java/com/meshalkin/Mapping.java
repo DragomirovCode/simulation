@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Mapping {
-    HashMap<Coordinates, Entity> entities = new HashMap<>();
+    public Map<Coordinates, Entity> entities = new HashMap<>();
 
     public void setEntity(Coordinates coordinates, Entity entity){
         entity.coordinates = coordinates;
@@ -27,7 +27,7 @@ public class Mapping {
             setEntity(new Coordinates(File.A, 2), new Predator(new Coordinates(file, 2)));
             setEntity(new Coordinates(File.G,6), new Tree(new Coordinates(file, 6)));
             setEntity(new Coordinates(File.B,3), new Grass(new Coordinates(file, 3)));
-            setEntity(new Coordinates(File.E,5), new Herbivore(new Coordinates(file, 5)));
+            setEntity(new Coordinates(File.A,1), new Herbivore(new Coordinates(file, 5)));
             setEntity(new Coordinates(File.B,4), new Rock(new Coordinates(file, 4)));
         }
     }

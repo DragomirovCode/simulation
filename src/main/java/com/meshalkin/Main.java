@@ -1,25 +1,21 @@
 package com.meshalkin;
 
-import com.meshalkin.entities.Herbivore;
 import com.meshalkin.entities.Predator;
 
-import java.util.*;
+import static com.meshalkin.Actions.initActions;
 
 public class Main {
     public static void main(String[] args) {
+
+
+
+        // Создаем объекты для тестирования
         Mapping mapping = new Mapping();
+        Predator predator = new Predator(new Coordinates(File.A, 1)); // Предположим, что хищник начинает с позиции 0,0
+        Actions actions = new Actions(predator);
 
-        Coordinates start = new Coordinates(File.A, 1);
-        Coordinates end = new Coordinates(File.G, 2);
-
-        Creature creature = new Predator(start);
-
-        boolean result = creature.searchForAHerbivore(mapping, start, end);
-
-        if (result) {
-            System.out.println("Травоядное существо найдено на позиции " + end);
-        } else {
-            System.out.println("Травоядное существо не найдено на позиции " + end);
-        }
+        // Запускаем игровой процесс
+        Coordinates initialCoordinates = predator.getCoordinates();
+        actions.turnActions(initialCoordinates, predator, mapping);
     }
 }
